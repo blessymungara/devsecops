@@ -11,7 +11,7 @@ pipeline {
     }
 	stage('RunSCAAnalysisUsingSnyk') {
             steps {		
-				withCredentials([string(credentialsId: 'dockerlogin', variable: 'SNYK_TOKEN')]) {
+				withCredentials([string(credentialsId: 'de54ff71-c4b8-4578-ab83-8cb132b515f6', variable: 'SNYK_TOKEN')]) {
 					sh 'mvn snyk:test -fn'
 				}
 			}
