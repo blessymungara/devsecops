@@ -6,14 +6,14 @@ clusters:
   name: kubernetes-clusters.ap-south-1.eksctl.io
 contexts:
 - context:
-    cluster: kubernetes-clusters.ap-south-1.eksctl.io
-    user: i-0a73bc18fcd10c4fd@kubernetes-clusters.ap-south-1.eksctl.io
-  name: i-0a73bc18fcd10c4fd@kubernetes-clusters.ap-south-1.eksctl.io
-current-context: i-0a73bc18fcd10c4fd@kubernetes-clusters.ap-south-1.eksctl.io
+    cluster: kubernetes-cluster.us-east-1.eksctl.io
+    user: i-0c901ba12128ee249@kubernetes-cluster.us-east-1.eksctl.io
+  name: i-0c901ba12128ee249@kubernetes-cluster.us-east-1.eksctl.io
+current-context: i-0c901ba12128ee249@kubernetes-cluster.us-east-1.eksctl.io
 kind: Config
 preferences: {}
 users:
-- name: i-0a73bc18fcd10c4fd@kubernetes-clusters.ap-south-1.eksctl.io
+- name: i-0c901ba12128ee249@kubernetes-cluster.us-east-1.eksctl.io
   user:
     exec:
       apiVersion: client.authentication.k8s.io/v1beta1
@@ -23,9 +23,9 @@ users:
       - --output
       - json
       - --cluster-name
-      - kubernetes-clusters
+      - kubernetes-cluster
       - --region
-      - ap-south-1
+      - us-east-1
       command: aws
       env:
       - name: AWS_STS_REGIONAL_ENDPOINTS
